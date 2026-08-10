@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Die Hochzeits-Challenge bis zum 21. August 2027 – sammelt gemeinsam 1.000 Karma-Punkte."
+    />
+    <meta name="theme-color" content="#e8eaeb" />
+    <title>1.000 Karma - Hochzeit am 21.08.2027</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="monogram" href="#countdown" aria-label="Zurück zum Countdown">DS<span>+</span>AK</a>
+      <nav aria-label="Hauptnavigation">
+        <a href="#mission">Die Mission</a>
+        <a href="#aufgaben">Karma sammeln</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel hero" id="countdown" aria-labelledby="hero-title">
+        <div class="hero-decoration hero-decoration--left" aria-hidden="true"></div>
+        <div class="hero-decoration hero-decoration--right" aria-hidden="true"></div>
+        <div class="eyebrow">Save the date · 21. August 2027</div>
+        <h1 id="hero-title">Bis wir<br /><em>Ja</em> sagen.</h1>
+        <div class="countdown" aria-label="Countdown bis zur Hochzeit" aria-live="polite">
+          <div><strong id="days">000</strong><span>Tage</span></div>
+          <i>:</i>
+          <div><strong id="hours">00</strong><span>Stunden</span></div>
+          <i>:</i>
+          <div><strong id="minutes">00</strong><span>Minuten</span></div>
+          <i>:</i>
+          <div><strong id="seconds">00</strong><span>Sekunden</span></div>
+        </div>
+        <a class="scroll-hint" href="#mission">
+          <span>Mehr entdecken</span>
+          <span aria-hidden="true">↓</span>
+        </a>
+      </section>
+
+      <section class="panel story" id="mission" aria-labelledby="story-title">
+        <div class="story-copy">
+          <p class="eyebrow">Ein kleines Abenteuer</p>
+          <h2 id="story-title">Liebe, Leben<br />und ein bisschen <em>Karma.</em></h2>
+          <div class="story-text">
+            <p>
+              Ich denke, dass sehr viele zustimmen würden, 
+              wenn ich sage, dass du bereits ein sehr gutes Karmakonto hast. 
+              Noch mehr würden mir allerdings zustimmen, wenn ich sagen würde, dass es noch 
+              Potenzial gibt.
+              Leider können wir eure Hochzeit nur komplett
+              unterstützen, wenn du noch etwas an deinem Karmakonto arbeitest.
+            </p>
+            <p>
+              Dafür bieten wir dir unten ein paar Aufgaben herausgesucht, die dabei helfen, dein Karmakonto zu verbessern.
+              Wenn du bis zur Hochzeit 1000 Karma Punkte gesammelt hast, dann bekommst du von deinem Trauzeugen die Unterschrift.
+            </p>
+          </div>
+          <a class="text-link" href="#aufgaben">Zu den Aufgaben<span aria-hidden="true">→</span></a>
+        </div>
+        <aside class="quote-card">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <blockquote>Das Glück ist das Einzige, das sich verdoppelt, wenn man es teilt.</blockquote>
+          <cite>— D.S.</cite>
+        </aside>
+      </section>
+
+      <section class="tasks-section" id="aufgaben" aria-labelledby="tasks-title">
+        <div class="tasks-heading">
+          <div>
+            <p class="eyebrow">Gutes tun</p>
+            <h2 id="tasks-title">Sammelt <em>Karma.</em></h2>
+          </div>
+          <p>
+            Lieber Daniel: Stelle dich jeder Challenge, sammle Karma und
+            beweise, dass du bereit für das Eheleben bist. Den offiziellen Stand pflegt dein Trauzeugenteam.
+          </p>
+        </div>
+
+        <div class="filter-bar" role="group" aria-label="Aufgaben filtern">
+          <button class="filter is-active" type="button" data-filter="all">Alle</button>
+          <button class="filter" type="button" data-filter="open">Offen</button>
+          <button class="filter" type="button" data-filter="completed">Fertig</button>
+        </div>
+
+        <div class="task-grid" id="task-list" aria-live="polite">
+          <p class="task-message">Aufgaben werden geladen …</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="karma-footer">
+      <div class="footer-copy">
+        <span>Unser gemeinsames Ziel</span>
+        <strong><span id="karma-current">0</span> <small>von 1.000 Karma</small></strong>
+      </div>
+      <div class="progress-track" role="progressbar" aria-label="Gesammelte Karma-Punkte" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0">
+        <div class="progress-fill" id="karma-progress"></div>
+      </div>
+      <p id="karma-remaining">Noch 1.000 Punkte bis zum Ziel.</p>
+      <p class="footer-note">Mit Liebe gemacht für den 21.08.2027 · Schulter.tech</p>
+    </footer>
+  </body>
+</html>
