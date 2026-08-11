@@ -13,11 +13,11 @@ lieblingsessen;Fine-Dining;Koche für A.K. ein 3 Gänge Menu, falls A.K. wünsch
 verwoehnung;Verwöhne;Mache Benni vor mindestens 3 unabhängigen Zeugen 5 ernstgemeinte Komplimente. Fasse ihn dabei an beide Hände und schaue ihm tief in die Augen.;100;0;1;🤝
 boot;Das Boot;Fahre mit deinem Faltboot an folgende Koordinaten: 53.50616857925201, 10.254859760715112.;100;0;1;🛶
 playlist;DJ-Daniel;Erstelle eine Playlist mit 10 Liebesliedern und spiele sie deiner Verlobten vor. Optional kannst du mit Taxi zum Auftritt kommen;100;0;1;🎧
-konzert;Konzertreihe;Gehe auf 4 verschiedene Konzerte mit 4 verschiedenen Personen in 4 verschiedenen Städten.;150;0;4;🎤
+konzert;Konzertreihe;Gehe mit 5 verschiedenen Personen in 5 verschiedenen Städten auf 5 verschiedene Konzerte.;150;0;5;🎤
 jack-elwood;Jack & Elwood;Organisiere einen Filmabend, bei dem der Film Blues Brothers schaut. Eine Person davon darf den Film vorher allerdings noch nie gesehen haben!;150;0;1;🕶
 bibelkenner;Bibelkenner;Zitiere bei einem Besuch bei deinen Schwiegereltern 3 Mal aus der Bibel. Das Zitat zählt nur, wenn A.K. dabei nicht lachen muss.;100;0;3;📖
 sonntagsausflug;Sonntagsausflug;Fahre mit A.K. an einen Ort, den ihr beide miteinander verbindet, und veranstalte dort ein romantisches Picknick.;100;0;1;🧺
-schwiegereltern-interview;Das große Daniel-Archiv;Erzähle A.K. drei Geschichten aus deiner Kindheit oder Jugend, die sie noch nicht kennt. Mindestens eine davon muss peinlich sein.;100;0;3;🎙`;
+schwiegereltern-interview;Das große Daniel-Archiv;Erzähle A.K. drei Geschichten aus deiner Kindheit oder Jugend, die sie noch nicht kennt. Mindestens eine davon muss peinlich sein.;100;0;3;🎙`
 
 const countdownElements = {
   days: document.querySelector("#days"),
@@ -130,7 +130,7 @@ function renderTasks(tasks) {
           >
             <div class="task-progress-fill" style="width: ${taskPercent}%"></div>
           </div>
-          <p class="task-source">Fortschritt wird über Git gepflegt</p>
+          <p class="task-source">Fortschritt wird über das Trauzeugenteam gepflegt</p>
         </article>`;
     })
     .join("");
@@ -148,7 +148,7 @@ function updateKarma(tasks) {
   document.querySelector("#karma-progress").style.width = `${percent}%`;
   document.querySelector("#karma-remaining").textContent = remaining
     ? `Noch ${remaining.toLocaleString("de-DE")} Punkte bis zum Ziel.`
-    : "Geschafft – 1.000 Karma-Punkte gesammelt!";
+    : "Geschafft - 1.000 Karma-Punkte gesammelt!";
   progress.setAttribute("aria-valuenow", String(current));
 }
 
