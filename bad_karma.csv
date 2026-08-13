@@ -1,4 +1,4 @@
 id;titel;beschreibung;punkte;counts;joker;symbol
 response;Geghostet;Du hast vergessen, deinen Freunden innerhalb von 48 Stunden auf eine Nachricht zu antworten? Oh, oh - das gibt 5 Punkte Abzug.;5;0;3;👻
-toolate;Zu spät;Du bist nicht zur vereinbarten Zeit bei einer Verabredung und hast nicht mindestens 15 Minuten vorher Bescheid gesagt? Das gibt leider pro angefangene 10 Minuten 15 Punkte Abzug.;1;0;-15;⏰
+toolate;Zu spät;Du bist nicht zur vereinbarten Zeit bei einer Verabredung und hast nicht mindestens 15 Minuten vorher Bescheid gesagt? Das gibt leider pro angefangene 10 Minuten 15 Punkte Abzug.;15;0;5;⏰
 handyfrei;Handyfreie Zeit;A.K. hat die Macht, einmal pro Tag 30 Minuten handyfreie Zeit einzuberufen. Für jeden Blick auf das Handy gehen 5 Karma-Punkte verloren.;5;0;3;📵
