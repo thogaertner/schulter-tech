@@ -5,6 +5,7 @@
   --green: #27343b;
   --sage: #89979e;
   --gold: #607985;
+  --danger: #965d57;
   --line: rgba(23, 28, 32, 0.17);
   --white: #fbfcfc;
   --serif: "DM Sans", Arial, sans-serif;
@@ -85,6 +86,14 @@ h1 em, h2 em { color: var(--gold); font-style: normal; font-weight: 500; }
 .countdown strong { font-family: var(--serif); font-size: clamp(2rem, 5vw, 4.8rem); line-height: 1; }
 .countdown span { color: var(--green); font-size: .62rem; letter-spacing: .15em; margin-top: .6rem; text-transform: uppercase; }
 .countdown i { color: var(--gold); font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 4rem); font-style: normal; line-height: .9; }
+.hero-karma { margin-top: clamp(1.25rem, 3vh, 2rem); max-width: 34rem; position: relative; text-align: left; width: 100%; z-index: 1; }
+.hero-karma-copy { align-items: end; display: flex; justify-content: space-between; }
+.hero-karma-copy > span { color: var(--green); font-size: .65rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.hero-karma-copy strong { color: var(--gold); font-size: 1.35rem; line-height: 1; }
+.hero-karma-copy small { color: var(--ink); font-size: .65rem; font-weight: 500; }
+.hero-karma-track { background: rgba(23, 28, 32, .12); height: .45rem; margin-top: .65rem; overflow: hidden; }
+.hero-karma-progress { background: linear-gradient(90deg, var(--gold), var(--sage)); height: 100%; transition: width .6s ease; width: 0; }
+.hero-karma > p { font-size: .68rem; margin: .45rem 0 0; opacity: .65; }
 
 .scroll-hint { align-items: center; bottom: 2rem; display: flex; flex-direction: column; font-size: .65rem; gap: .3rem; letter-spacing: .18em; position: absolute; text-decoration: none; text-transform: uppercase; }
 .scroll-hint span:last-child { font-size: 1.2rem; animation: bob 1.8s infinite; }
@@ -99,6 +108,11 @@ h1 em, h2 em { color: var(--gold); font-style: normal; font-weight: 500; }
 .story h2 em { color: #afc0c8; }
 .story-text { border-left: 1px solid rgba(255,255,255,.25); display: grid; gap: 1.5rem; margin: 2.5rem 0; max-width: 48rem; padding-left: 2rem; }
 .story-text p { margin: 0; opacity: .78; }
+.rules-list { display: grid; gap: 1rem; margin: 0; padding-left: 1.35rem; }
+.rules-list li { padding-left: .4rem; }
+.rules-list li::marker { color: #afc0c8; font-weight: 700; }
+.rules-list strong { color: #d4dee2; display: block; }
+.story-text .rules-formula { border-top: 1px solid rgba(255,255,255,.2); color: #d4dee2; font-size: .78rem; font-weight: 600; letter-spacing: .04em; opacity: 1; padding-top: 1rem; }
 .text-link { border-bottom: 1px solid #afc0c8; color: #afc0c8; display: inline-flex; gap: .75rem; padding-bottom: .35rem; text-decoration: none; }
 .story-copy, .quote-card { position: relative; }
 .quote-card { border: 1px solid rgba(255,255,255,.22); padding: clamp(2rem, 4vw, 4rem); }
@@ -132,6 +146,22 @@ cite { color: #afc0c8; font-size: .7rem; font-style: normal; letter-spacing: .15
 .task-progress-fill { background: linear-gradient(90deg, var(--gold), var(--sage)); height: 100%; transition: width .6s ease; }
 .task-source { border-top: 1px solid var(--line); font-size: .68rem !important; letter-spacing: .08em; margin-top: auto !important; padding-top: 1rem; text-transform: uppercase; }
 
+.bad-karma-section { background: #ece9e8; }
+.bad-karma-section .eyebrow, .bad-karma-section h2 em { color: var(--danger); }
+.joker-summary { align-items: center; background: var(--white); border-left: .3rem solid var(--danger); display: grid; grid-template-columns: 1fr auto; margin: 0 auto 2rem; max-width: 90rem; padding: 1.2rem 1.4rem; }
+.joker-summary > span { font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.joker-summary strong { color: var(--danger); font-size: 1.5rem; }
+.joker-summary small { grid-column: 1 / -1; opacity: .65; }
+.bad-karma-card .points, .bad-karma-card .task-icon, .bad-karma-card .task-progress-copy strong { color: var(--danger); }
+.bad-karma-card[data-state="penalty"] { background: #f3e8e6; }
+.bad-karma-card[data-state="penalty"] .status::before { background: var(--danger); }
+.bad-karma-card[data-state="protected"] .status::before { background: var(--sage); }
+.bad-karma-card[data-state="clear"] .status::before { background: var(--gold); }
+.bad-karma-card .task-progress-fill { background: linear-gradient(90deg, var(--danger), #c79b94); }
+.bad-karma-details { border-top: 1px solid var(--line); display: grid; gap: .35rem; margin-top: 1rem; padding-top: .85rem; }
+.bad-karma-detail { align-items: baseline; display: flex; font-size: .72rem; justify-content: space-between; text-transform: uppercase; }
+.bad-karma-detail strong { color: var(--danger); }
+
 .karma-footer { background: #151b1f; color: var(--white); padding: 3.5rem clamp(1.25rem, 7vw, 7rem) 2rem; }
 .footer-copy { align-items: end; display: flex; justify-content: space-between; margin: auto; max-width: 90rem; }
 .footer-copy > span { color: #afc0c8; font-size: .68rem; letter-spacing: .17em; text-transform: uppercase; }
@@ -140,6 +170,7 @@ cite { color: #afc0c8; font-size: .7rem; font-style: normal; letter-spacing: .15
 .progress-track { background: rgba(255,255,255,.12); height: .55rem; margin: 1.5rem auto .75rem; max-width: 90rem; overflow: hidden; }
 .progress-fill { background: linear-gradient(90deg, #607985, #afc0c8); height: 100%; transition: width .6s ease; width: 0; }
 .karma-footer > p { font-size: .72rem; margin: 0 auto; max-width: 90rem; opacity: .65; }
+#karma-breakdown { margin-top: .25rem; }
 .footer-note { border-top: 1px solid rgba(255,255,255,.12); margin-top: 3rem !important; padding-top: 1.5rem; text-align: center; }
 
 @media (max-width: 850px) {
@@ -160,6 +191,8 @@ cite { color: #afc0c8; font-size: .7rem; font-style: normal; letter-spacing: .15
   .countdown span { font-size: .5rem; letter-spacing: .08em; }
   .story-text { padding-left: 1.25rem; }
   .task-grid { grid-template-columns: 1fr; }
+  .joker-summary { align-items: start; grid-template-columns: 1fr; }
+  .joker-summary strong, .joker-summary small { grid-column: 1; }
   .footer-copy { align-items: start; flex-direction: column; gap: 1.25rem; }
 }
 

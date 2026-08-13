@@ -8,8 +8,9 @@ Eine statische, responsive One-Page-Website für die Hochzeit am **21. August 20
 - Bildschirmfüllende Abschnitte für Start und Einführung
 - Filterbare Aufgaben mit den automatisch berechneten Zuständen „Offen“ und „Fertig“
 - Fortschrittsanzeige pro Aufgabe mit aktuellem und benötigtem Zähler
-- Karma-Fortschrittsanzeige mit einem Ziel von 1.000 Punkten
+- Karma-Fortschrittsanzeigen im Countdown und Footer mit Abzügen und einem Ziel von 1.000 Punkten
 - Aufgaben und offizieller Fortschritt aus der Datei `tasks.csv`
+- Karma-Abzüge und Joker aus der Datei `bad_karma.csv`
 - Keine Fortschrittsänderung durch Besucherinnen und Besucher der Website
 - Responsives Layout und barrierearme Bedienung
 
@@ -29,6 +30,7 @@ Die `index.html` kann für eine schnelle Vorschau auch direkt geöffnet werden. 
 
 - Datum und Uhrzeit: `weddingDate` in `script.js`
 - Aufgaben, Punkte und Fortschritt: `tasks.csv`
+- Verstöße, Karma-Abzüge und Joker: `bad_karma.csv`
 - Punkte-Ziel: `targetKarma` in `script.js`
 - Farben und Typografie: Variablen am Anfang von `style.css`
 
@@ -39,6 +41,14 @@ id;titel;beschreibung;punkte;number completed;Counts;symbol
 ```
 
 Jede Aufgabe benötigt eine eindeutige ID, einen ganzzahligen Punktewert sowie zwei nicht negative Zähler. `number completed` gibt an, wie oft die Aufgabe bereits erledigt wurde; `Counts` enthält die benötigte Anzahl. Solange der erste Wert kleiner als der zweite ist, lautet der Status „Offen“. Sobald der Zielwert erreicht ist, lautet er „Fertig“ und die Karma-Punkte werden gutgeschrieben. Der Fortschritt wird direkt in `tasks.csv` gepflegt und anschließend zu GitHub übertragen. So können ausschließlich Personen mit Schreibzugriff auf das Repository den offiziellen Stand verändern.
+
+Die Datei `bad_karma.csv` verwendet folgende Spalten:
+
+```text
+id;titel;beschreibung;punkte;counts;joker;symbol
+```
+
+`counts` enthält die Anzahl der registrierten Verstöße. Jeder Eintrag verbraucht zunächst einen der in `joker` hinterlegten Joker. Erst wenn diese aufgebraucht sind, wird für jeden weiteren Verstoß der Wert aus `punkte` vom gesammelten Karma abgezogen. Die Website zeigt den Jokerverbrauch je Eintrag sowie als Gesamtsumme an.
 
 ## Veröffentlichung mit GitHub Pages
 
