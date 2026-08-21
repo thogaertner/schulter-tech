@@ -1,4 +1,4 @@
-const launchDate = new Date("2026-08-21T10:00:00+02:00");
+const launchDate = new Date("2026-08-28T15:00:00+02:00");
 
 const countdownElements = {
   days: document.querySelector("#days"),
