@@ -12,7 +12,7 @@ bandprobe;Die Band!;Organisiere eine Roundback-Reunion-Probe. Dabei müssen 4 Mi
 bandprobe-motivator;Die Band! (+);Du kannst zusätzliches Karma bekommen, wenn du deine Fähigkeiten als Motivator unter Beweis stellst. Wenn mehr als die Hälfte übt, bekommst du etwas mehr Karma gutgeschrieben.;100;0;1;🎸
 lieblingsessen;Fine-Dining;Koche für A.K. ein 3-Gänge-Menü, auf Wunsch auch mit Weinbegleitung. Das Handy bleibt während des gesamten Essens allerdings aus.;100;0;1;🍽
 verwoehnung;Verwöhne;Mache Benni vor mindestens 3 unabhängigen Zeugen 5 ernst gemeinte Komplimente. Fasse ihn dabei an beiden Händen und schaue ihm tief in die Augen.;100;0;1;🤝
-konzert;Konzertreihe;Gehe mit 5 verschiedenen Personen in 5 verschiedenen Städten auf 5 verschiedene Konzerte.;150;0;5;🎤
+konzert;Konzertreihe;Gehe mit 5 verschiedenen Personen in 5 verschiedenen Städten auf 5 verschiedene Konzerte.;150;1;5;🎤
 jack-elwood;Jack & Elwood;Organisiere einen Filmabend, bei dem ihr den Film „Blues Brothers“ schaut. Eine Person davon darf den Film allerdings noch nie gesehen haben. Niemand darf einschlafen und der Filmabend darf nicht vor 20 Uhr anfangen!;100;0;1;🕶
 bibelkenner;Bibelkenner (1/2);Zitiere bei einem Besuch bei deinen Schwiegereltern dreimal aus der Bibel. Die Zitate zählen nur, wenn A.K. dabei nicht lachen muss.;50;0;3;📖
 bibelkenner2;Bibelkenner (2/2);Zitiere bei einem Besuch bei deiner Schwiegeroma dreimal aus der Bibel. Die Zitate zählen nur, wenn A.K. dabei nicht lachen muss.;100;0;3;📖
